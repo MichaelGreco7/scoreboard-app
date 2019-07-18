@@ -43,13 +43,14 @@ const Player = (props) => {
 };
 
 class Counter extends React.Component {
-
   state = {
     score: 0
   };
 
   incrementScore() {
-    console.log('Hi, from inside incrementScore!');
+    this.setState({
+      score: this.state.score + 1
+    });
   };
 
   render() {
